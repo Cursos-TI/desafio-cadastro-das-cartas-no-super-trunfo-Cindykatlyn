@@ -5,6 +5,9 @@ int main() {
     char carta1[4], carta2[4]; 
     int populacao1, populacao2, pontosTuristicos1, pontosTuristicos2;
     float area1, area2, pib1, pib2;
+    float densidadePopulacional = (float)carta->populacao / carta->area;
+    float pibPerCapita = carta->pib / carta->populacao;
+  
 
     // Entrada de dados para a Carta 1
     printf("Digite o código da Carta 1: ");
@@ -44,6 +47,18 @@ int main() {
     printf("Área: %.2f\n", area2);
     printf("PIB: %.2f\n", pib2);
     printf("Pontos turísticos: %d\n", pontosTuristicos2);
+
+    printf("\n--- Carta do Super Trunfo ---\n");
+    printf("Estado: %c\n", carta->estado);
+    printf("Código: %s\n", carta->codigo);
+    printf("Nome da Cidade: %s\n", carta->nomeCidade);
+    printf("População: %d\n", carta->populacao);
+    printf("Área: %.2f km²\n", carta->area);
+    printf("PIB: %.2f\n", carta->pib);
+    printf("Pontos Turísticos: %d\n", carta->pontosTuristicos);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional);
+    printf("PIB per Capita: %.2f\n", pibPerCapita);
+    printf("----------------------------\n");
 
     return 0;
 }
